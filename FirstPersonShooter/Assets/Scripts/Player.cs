@@ -24,9 +24,8 @@ public class Player : MonoBehaviour {
 	}
 
     private void ReSpawn()
-    {
-        int max = spawnPoint.Length;
-        int spawn = (int)Random.Range(1f, max);
+    {        
+        int spawn = Random.Range(1, spawnPoint.Length);
         body.transform.position = spawnPoint[spawn].position;
         respawn = false;
     }
