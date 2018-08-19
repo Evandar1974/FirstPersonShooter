@@ -17,14 +17,14 @@ public class Eyes : MonoBehaviour {
 	void Update ()
     {
         //zoom control
-        if (Input.GetButtonDown("Zoom"))
+        if (Input.GetButton("Zoom"))
         {
             eyes.fieldOfView = defaultFOV / 1.5f;
         }
-        if (Input.GetButtonUp("Zoom"))
+        else
         {
             eyes.fieldOfView = defaultFOV;
         }
- 
+         
 	}
 }

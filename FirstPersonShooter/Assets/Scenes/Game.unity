@@ -161,6 +161,15 @@ Prefab:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 1295735847249198, guid: 931b48fdd1e68c244a2e1270cd7e778e, type: 2}
+      propertyPath: m_Name
+      value: Eyes
+      objectReference: {fileID: 0}
+    - target: {fileID: 114430529789132648, guid: 931b48fdd1e68c244a2e1270cd7e778e,
+        type: 2}
+      propertyPath: heloCall
+      value: 
+      objectReference: {fileID: 8300000, guid: d820bfda6b5b74e36a0637de9ed0cd61, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 931b48fdd1e68c244a2e1270cd7e778e, type: 2}
   m_IsPrefabParent: 0
@@ -393,6 +402,22 @@ Transform:
   m_Father: {fileID: 589200531}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &557532501 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1295735847249198, guid: 931b48fdd1e68c244a2e1270cd7e778e,
+    type: 2}
+  m_PrefabInternal: {fileID: 17449822}
+--- !u!114 &557532506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 557532501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0305c4a32dfb7b4bb4fc0d15a59f7dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &589200530
 GameObject:
   m_ObjectHideFlags: 0
