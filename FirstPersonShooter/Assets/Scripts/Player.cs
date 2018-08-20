@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Player : MonoBehaviour {
-    public AudioClip heloCall;
+    
     public GameObject spawnPoints;
-    private AudioSource audioSource;
     private Transform[] spawnPoint;
     private Rigidbody body;
     public bool respawn;
@@ -13,8 +12,7 @@ public class Player : MonoBehaviour {
 	void Start ()
     {
         spawnPoint = spawnPoints.GetComponentsInChildren<Transform>();
-        body = GetComponent<Rigidbody>();
-        audioSource = GetComponent<AudioSource>();
+        body = GetComponent<Rigidbody>();        
 	}
 	
 	// Update is called once per frame
@@ -24,10 +22,7 @@ public class Player : MonoBehaviour {
         {
             ReSpawn();
         }
-        if(Input.GetButton("Call"))
-        {
-            CallHeli();
-        }
+       
 	}
 
     private void ReSpawn()
@@ -36,13 +31,6 @@ public class Player : MonoBehaviour {
         body.transform.position = spawnPoint[spawn].position;
         respawn = false;
     }
-    private void CallHeli()
-    {
-        audioSource.clip = heloCall;
-        if(!audioSource.isPlaying)
-        {
-            audioSource.Play();
-        }
-    }
+   
 }
 
