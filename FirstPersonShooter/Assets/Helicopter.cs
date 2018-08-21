@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class Helicopter : MonoBehaviour {
     public AudioClip heloCall;
+    private AudioSource audioSource;
     // Use this for initialization
-    void Start () {
-		
+    void Start ()
+    {
+        audioSource = GetComponent<AudioSource>();		
 	}
 	
 	// Update is called once per frame
@@ -19,6 +21,12 @@ public class Helicopter : MonoBehaviour {
     }
     private void CallHeli()
     {
+        audioSource.clip = heloCall;
+        if(!audioSource.isPlaying)
+        {
+            audioSource.loop = false;
+            audioSource.Play();
+        }
         
     }
 }
